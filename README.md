@@ -5,13 +5,21 @@
 </p>
 
 <h1 align="center">
-	JTP (JSON Transfer Protocol)
+	JTP (JSON Transfer Protocol) Library
 </h1>
 <div align="center">
 
 Easy to use, fast and lightweight library for Node.js.
 
-[![LICENSE](https://img.shields.io/github/license/geisonjr/teste?style=flat)](https://github.com/GeisonJr/teste/blob/main/LICENSE)
+</div>
+
+<div align="center">
+
+[![CI](https://github.com/GeisonJr/jtp/actions/workflows/ci.yaml/badge.svg)](https://github.com/GeisonJr/jtp/actions/workflows/ci.yaml)
+[![CD](https://github.com/GeisonJr/jtp/actions/workflows/cd.yaml/badge.svg)](https://github.com/GeisonJr/jtp/actions/workflows/cd.yaml)
+[![LICENSE](https://img.shields.io/github/license/geisonjr/jtp?style=flat)](https://github.com/GeisonJr/jtp/blob/main/LICENSE)
+[![NPM version](https://img.shields.io/npm/v/@geisonjr/jtp?style=flat)](https://npmjs.com/package/@geisonjr/jtp)
+[![NPM downloads](https://img.shields.io/npm/dt/@geisonjr/jtp?style=flat)](https://npmjs.com/package/@geisonjr/jtp)
 
 </div>
 

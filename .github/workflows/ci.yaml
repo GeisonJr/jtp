@@ -1,0 +1,37 @@
+name: CI
+run-name: ${{github.actor}} is running ${{github.workflow}} on ${{github.repository}}
+
+on:
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Test with Node.js v${{matrix.node}} on ${{matrix.os}}
+    strategy:
+      matrix:
+        os:
+          # - macos-latest
+          - ubuntu-latest
+          # - windows-latest
+        node:
+          # See https://github.com/nodejs/release#release-schedule for details
+          - 18.x # Maintenance
+          - 20.x # LTS
+          - 21.x # Current
+    runs-on: ${{matrix.os}}
+    steps:
+    - name: ☁️ - Checkout
+      uses: actions/checkout@v4
+    - name: 🔧 - Use Node.js v${{matrix.node}}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{matrix.node}}
+        cache: npm
+    - name: 📦 - Run "npm ci"
+      run: npm ci
+    - name: 🏗️ - Run "npm run build"
+      run: npm run build --if-present
+    - name: 🧪 - Run "npm test"
+      run: npm test
